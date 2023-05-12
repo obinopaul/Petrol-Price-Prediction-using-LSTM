@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    {% if prediction_error %}
+        <div class="alert alert-danger" role="alert">
+            {{ prediction_error }} 
+        </div>
+    {% else %}
+        <h2 class="text-center mb-4">Predicted Petrol Price for {{ target_date }}</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-4">Predicted Petrol Price:</h5>
+                        <p class="card-text lead">{{ predicted_price }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+

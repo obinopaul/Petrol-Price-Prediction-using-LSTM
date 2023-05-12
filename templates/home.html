@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Petrol Price Prediction {% endblock %}
+
+{% block content %}
+    <div class="form-container">
+        <h1>Petrol Price Prediction</h1>
+        <form method="POST" action="{{ url_for('predict_petrol_price') }}">
+            <label for="target_date">Enter a date (YYYY-MM-DD):</label>
+            <input type="text" id="target_date" name="target_date" placeholder="e.g. 2020-05-01" required>
+            <button type="submit">Predict</button>
+            <div class="note-container">
+                <p class="note">This is a univariate timeseries prediction of crude oil price using LSTM. The training data was acquired from a public database and may be inaccurate. The data ranged from 2003 to 2015. </p> 
+                <p class="note">Also note that there are many other factors that can determine crude prices such as OPEC production cuts, Geopolitical tensions, Global supply and demand, Speculations etc.</p> 
+                <p class="note">The predicted prices from this model should therefore only be used for educational purposes. </p>
+                <p class="note">For more information on how this model was built, check out <a href="https://github.com/obinopaul/Petrol-Price-Prediction-using-LSTM.git">Github repository</a>.</p> 
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

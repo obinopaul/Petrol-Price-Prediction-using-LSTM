@@ -1,55 +1,41 @@
-# Hourly Energy Consumption from PJM's Eastern Interconnection Grid 
+# Petrol Price Prediction with LSTM 
 ==============================
                                                                     
-This repository contains code for univariate time series modeling of hourly energy consumption data (in Megawatts) from PJMs Eastern Interconnection Grid. The aim of this project is to build a model that can accurately forecast hourly energy consumption (in Megawatts) based on historical data.
+This is a machine learning model that predicts petrol prices using univariate timeseries data and LSTM (Long Short-Term Memory) neural networks. The model is trained on historical crude oil prices from a public database ranging from 2003 to 2015.
 
 <p align="center">
-  <img src="Images/PJM_Energy_Consumption.png" alt="Alt text" width="500" height="300">
+  <img src="Images/time_series_plot.png" alt="Alt text" width="500" height="300">
 </p>
 
-<p align="center">
-  <img src="Images/Hourly_Average_Energy_Consumption.png" alt="Alt text" width="500" height="300">
-</p>
+## Requirements
+The following Python packages are required to run this model:
 
-## Dataset
-The data used in this project is a time series dataset containing hourly energy consumption data from PJMs Eastern Interconnection Grid, spanning over 10 years. The dataset is available in the dataset folder of this repository.
+1. tensorflow
+2. pandas
+3. numpy
+4. scikit-learn
+5. joblib
+6. flask
+You can install all these packages by running ```pip install -r requirements.txt``` in the command line.
 
-## Methodology
-The analysis was performed using Facebook's Prophet library in Python. Prophet is a powerful tool for time series forecasting that accounts for seasonality, trends, and holidays.
-
-The following steps were followed to perform the modelling:
-
-1. Data preprocessing: cleaning, formatting, and resampling the data to hourly frequency
-2. Exploratory data analysis: The data was visualized to gain insights into the patterns and trends in the data.
-3. Model fitting: training the Prophet model on the preprocessed data
-4. Model validation: evaluating the accuracy of the model using metrics such as Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE)
-5. Forecasting: generating future predictions based on the fitted model
-
-## Result
-The model achieved good accuracy on the validation data, with an MAE of 190 and an RMSE of 249. The forecasted values for the next Z hours are available in the "models" folder of this repository.
-
-<p align="center">
-  <img src="Images/testing_set_forecast.png" alt="Alt text" width="500" height="300">
-</p>
-                      
-<p align="center">
-  <img src="Images/30_Days_Forecast.png" alt="Alt text" width="500" height="300">
-</p>
-      
-
-## Usage                                   
-**Clone this repository to your local machine.**                                            
-```bash     
-git clone https://github.com/obinopaul/hourly_energy_consumption.git                                       
-```      
-
-**Install the required packages.**                                                        
+## Usage
+To run the model, you need to first clone this repository and navigate to the cloned directory. Then, run the ```app.py``` file using the following command:  
 ```bash    
-pip install -r requirements.txt                         
-```    
-**Run the notebook.**  
-Run the ```hourly_energy_consumption_2.ipynb``` notebook to preprocess the data, fit the model, and generate predictions
+python app.py                         
+```  
+This will start a local server that you can access on your web browser at ```http://localhost:5000```.
 
-## Conclusion
-In this project, we successfully built a univariate time series model using Prophet to forecast hourly energy consumption in PJMs Eastern Interconnection Grid. The model achieved good accuracy on the validation data, and the predictions for the next several hours are available for use.
-"# hourly_energy_consumption" 
+Enter a target date (in the format YYYY-MM-DD) and click on the "Predict" button to get a prediction of the petrol price for that date.
+
+**Clone this repository to your local machine.**
+```bash
+git clone https://github.com/obinopaul/Petrol-Price-Prediction-using-LSTM.git                                      
+```
+
+## Disclaimer
+It's important to note that this model is based on historical data and may not accurately predict future petrol prices. There are many other factors that can determine crude prices such as OPEC production cuts, geopolitical tensions, global supply and demand, and speculations. The predicted prices from this model should only be used for educational purposes.
+
+## References
+The data used to train this model was acquired from [FRED (Federal Reserve Economic Data)] (https://fred.stlouisfed.org/series/DCOILWTICO).
+
+"#Petrol_Price_Prediction_with_LSTM"
