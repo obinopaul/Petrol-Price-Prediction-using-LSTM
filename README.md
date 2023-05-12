@@ -7,7 +7,7 @@ This is a machine learning model that predicts petrol prices using univariate ti
   <img src="Images/time_series_plot.png" alt="Alt text" width="500" height="300">
 </p>
 
-## Requirements
+## Requirements 
 The following Python packages are required to run this model:
 
 1. tensorflow
@@ -36,6 +36,6 @@ git clone https://github.com/obinopaul/Petrol-Price-Prediction-using-LSTM.git
 It's important to note that this model is based on historical data and may not accurately predict future petrol prices. There are many other factors that can determine crude prices such as OPEC production cuts, geopolitical tensions, global supply and demand, and speculations. The predicted prices from this model should only be used for educational purposes.
 
 ## References
-The data used to train this model was acquired from [FRED (Federal Reserve Economic Data)] (https://fred.stlouisfed.org/series/DCOILWTICO).
+The data used to train this model was acquired from [FRED (Federal Reserve Economic Data)](https://fred.stlouisfed.org/series/DCOILWTICO).
 
 "#Petrol_Price_Prediction_with_LSTM"
