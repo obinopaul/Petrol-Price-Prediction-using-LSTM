@@ -16,6 +16,7 @@ The following Python packages are required to run this model:
 4. scikit-learn
 5. joblib
 6. flask
+
 You can install all these packages by running ```pip install -r requirements.txt``` in the command line.
 
 ## Usage
